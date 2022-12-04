@@ -18,7 +18,7 @@ Also, please note that since there is no Database, or no back-end, the links and
 ## Features:
 - [ ] Customizable links
 - [x] Customizable username
-- [ ] Customizable background
+- [x] Customizable background
 - [ ] Weather
 - [x] Time
 - [ ] Date
