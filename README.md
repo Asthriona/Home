@@ -9,6 +9,9 @@ Oh, and the google search is not working.
 You can use my version by setting your home page to [home.asthriona.com](https://home.asthriona.com), or deploy that one, I'm personally using Cloudflare to deploy this.  
 No back-end is required, everything runs in the browser, so no server costs if you want to use Vercel or whatever you like. :)  
   
+## Want to help?
+You can help by making a pull request, or by opening an issue, I'll be happy to help you, and I'll be happy to review your contributions!
+  
 ## Warning:
 Also, please note that since there is no Database, or no back-end, the links and username are saved in your browser, so when you clear your data it will be gone.
 
