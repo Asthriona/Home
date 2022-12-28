@@ -45,44 +45,13 @@
 // import axios from 'axios'
 export default {
   name: "home-page",
+  props: ["links"],
   data() {
     return {
       meteo: {},
       username: "",
       time: {},
       search: "",
-      links: [
-        {
-          name: "Github",
-          url: "https://github.com/Asthriona",
-          icon: "mdi-github",
-        },
-        {
-          name: "YouTube",
-          url: "https://www.youtube.com",
-          icon: "mdi-youtube",
-        },
-        {
-          name: "Asthriona.com",
-          url: "https://asthriona.com",
-          icon: "mdi-web",
-        },
-        {
-          name: "Asthriona.space",
-          url: "https://asthriona.space",
-          icon: "mdi-web",
-        },
-        {
-          name: "Tweetdeck",
-          url: "https://tweetdeck.twitter.com",
-          icon: "mdi-twitter",
-        },
-        {
-          name: "Anilist.co/asthriona",
-          url: "https://anilist.co/user/Asthriona/",
-          icon: "mdi-web",
-        },
-      ],
     };
   },
   created() {
