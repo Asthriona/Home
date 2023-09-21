@@ -43,8 +43,8 @@ export default {
           icon: "mdi-web",
         },
         {
-          name: "Tweetdeck",
-          url: "https://tweetdeck.twitter.com",
+          name: "Twitter",
+          url: "https://twitter.com",
           icon: "mdi-twitter",
         },
         {
