@@ -12,10 +12,14 @@
     <v-icon>mdi-plus</v-icon>
     </v-btn>
   </div>
+  <div class="weatherWidget">
+    <WeatherWidget />
+  </div>
   </v-app>
 </template>
 
 <script>
+import WeatherWidget from './components/Weather-Widget.vue';
 export default {
   name: "App",
 
@@ -54,6 +58,9 @@ export default {
         },
       ],
   }),
+  components: {
+    WeatherWidget,
+  },
   created() {
     this.$vuetify.theme.dark = true;
     this.getBackground();
@@ -102,6 +109,12 @@ export default {
   position: absolute;
   top: 10px;
   right: 50px;
+  z-index: 100;
+}
+.weatherWidget {
+  position: absolute;
+  top: 10px;
+  left: 10px;
   z-index: 100;
 }
 </style>
