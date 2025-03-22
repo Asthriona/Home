@@ -6,7 +6,7 @@
           <h1><span @click="updateUsername()">{{ username }}</span>, {{ time.line }}</h1>
           <h2>
             現在の時刻は<span class="time">{{ time.clock }}</span>です <br />
-            あなたの場所は東京、日本です
+            あなたの場所は{{ location || "NO LOCATION" }}です
           </h2>
         </v-col>
         <v-col cols="6" class="google-search" align="center" justify="center">
@@ -42,7 +42,7 @@
 </template>
 
 <script>
-// import axios from 'axios'
+import axios from 'axios'
 export default {
   name: "home-page",
   props: ["links"],
@@ -52,12 +52,14 @@ export default {
       username: "",
       time: {},
       search: "",
+      location: "",
     };
   },
   created() {
     this.getUsername();
     this.getLocalTime();
     this.updateClock();
+    this.getLocation();
   },
   methods: {
     // get username from local storage
@@ -112,6 +114,17 @@ export default {
       localStorage.setItem("username", username);
       return (this.username = `${username}さん`);
     },
+    // Get location
+    getLocation() {
+      axios.get("http://ip-api.com/json/")
+      .then((res) => {
+        console.log(res.data);
+        this.location = res.data.city + ", " + res.data.country;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    }
   },
 };
 </script>
